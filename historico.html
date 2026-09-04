@@ -2,7 +2,10 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
     <title>Histórico - MS2 S.I.G.M.A</title>
 
@@ -13,7 +16,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -24,23 +31,56 @@
   </head>
 
   <body>
-    <main class="container text-center py-5 pb-5">
-      <h1 class="fw-semibold">Histórico de Migués</h1>
+    <main class="container py-5">
+      <div class="text-center">
+        <h1 class="fw-semibold">
+          Histórico de Migués
+        </h1>
 
-      <p class="text-secondary mb-4">
-        Confira todos os migués que você já gerou.
-      </p>
+        <p class="text-secondary mb-5">
+          Confira seus migués favoritos e seu histórico.
+        </p>
+      </div>
 
-      <div
-        id="historico"
-        class="text-start mx-auto"
-        style="max-width: 700px"
-      ></div>
+      <section class="mb-5">
+        <h2 class="h5 fw-semibold text-center mb-3">
+          ⭐ Migués Favoritos
+        </h2>
 
-      <div class="d-flex justify-content-center gap-2 mt-4 mb-5">
-        <a href="./index.html" class="btn btn-primary"> Voltar </a>
+        <div
+          id="favoritos"
+          class="mx-auto"
+          style="max-width: 700px;"
+        ></div>
+      </section>
 
-        <button id="btnLimpar" type="button" class="btn btn-danger">
+      <hr class="my-5" />
+
+      <section>
+        <h2 class="h5 fw-semibold text-center mb-3">
+          📋 Histórico
+        </h2>
+
+        <div
+          id="historico"
+          class="mx-auto"
+          style="max-width: 700px;"
+        ></div>
+      </section>
+
+      <div class="d-flex justify-content-center gap-2 mt-5 mb-5">
+        <a
+          href="./index.html"
+          class="btn btn-primary"
+        >
+          Voltar
+        </a>
+
+        <button
+          id="btnLimpar"
+          type="button"
+          class="btn btn-danger"
+        >
           Limpar histórico
         </button>
       </div>

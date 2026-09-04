@@ -1,35 +1,69 @@
 body {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 button {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+#migue,
+#alertaCopiado,
+#alertaFavorito {
+    min-width: 300px;
+    text-align: center;
+    z-index: 1050;
+}
+
+#migue {
+    top: 0;
+}
+
+#alertaCopiado {
+    top: 75px;
+}
+
+#alertaFavorito {
+    top: 125px;
 }
 
 .animacao-alert {
-  animation: aparecer 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: aparecer 0.5s ease-out;
+}
+
+.animacao-saida {
+    animation: desaparecer 0.4s ease-in forwards;
 }
 
 @keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -40px);
-  }
+    from {
+        transform: translate(-50%, -60px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
+    to {
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50%, -60px);
+        opacity: 0;
+    }
 }

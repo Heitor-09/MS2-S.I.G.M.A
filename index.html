@@ -12,8 +12,11 @@
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -26,10 +29,26 @@
   <body>
     <div
       id="migue"
-      class="alert bg-success text-white fw-bold position-fixed top-0 start-50 translate-middle-x mt-3 d-none shadow"
+      class="alert bg-success text-white fw-bold position-fixed top-0 start-50 translate-middle-x mt-3 shadow d-none"
       role="alert"
     >
       <span id="mensagem"></span>
+    </div>
+
+    <div
+      id="alertaCopiado"
+      class="alert bg-dark text-white fw-bold position-fixed start-50 translate-middle-x shadow d-none"
+      role="alert"
+    >
+      Texto copiado!
+    </div>
+
+    <div
+      id="alertaFavorito"
+      class="alert bg-warning text-dark fw-bold position-fixed start-50 translate-middle-x shadow d-none"
+      role="alert"
+    >
+      Migué favoritado!
     </div>
 
     <main class="container text-center">
@@ -39,20 +58,43 @@
         Sistema Inteligente de Geração de Migués Aleatórios
       </p>
 
-      <button id="btnMigue" type="button" class="btn btn-primary px-4">
+      <button
+        id="btnMigue"
+        type="button"
+        class="btn btn-primary px-4"
+      >
         Clique aqui para obter um novo migué!
       </button>
 
       <div class="d-flex justify-content-center gap-2 flex-wrap mt-4">
-        <button type="button" class="btn btn-success">Copiar migué</button>
+        <button
+          id="btnCopiar"
+          type="button"
+          class="btn btn-success"
+        >
+          Copiar migué
+        </button>
 
-        <button type="button" class="btn btn-primary">Favoritar</button>
+        <button
+          id="btnFavoritar"
+          type="button"
+          class="btn btn-primary"
+          disabled
+        >
+          Favoritar
+        </button>
 
-        <button type="button" class="btn btn-secondary">Histórico</button>
+        <a
+          href="./historico.html"
+          class="btn btn-secondary"
+        >
+          Histórico
+        </a>
       </div>
 
       <p class="small text-secondary mt-3">
-        Contador de Migués realizados: <strong id="contador">0</strong>
+        Contador de Migués realizados:
+        <strong id="contador">0</strong>
       </p>
     </main>
 
