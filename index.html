@@ -3,33 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>MS2 S.I.G.M.A</title>
 
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
 
   <body>
-    <div class="container mt-5 text-center">
-      <h1>Projeto S.I.G.M.A</h1>
+    <div
+      id="migue"
+      class="alert bg-success text-white fw-bold position-fixed top-0 start-50 translate-middle-x mt-3 d-none shadow"
+      role="alert"
+    >
+      <span id="mensagem"></span>
+    </div>
 
-      <button class="btn btn-primary mt-3">
+    <main class="container text-center">
+      <h1 class="fw-semibold">Projeto S.I.G.M.A</h1>
+
+      <p class="text-secondary mb-4">
+        Sistema Inteligente de Geração de Migués Aleatórios
+      </p>
+
+      <button id="btnMigue" type="button" class="btn btn-primary px-4">
         Clique aqui para obter um novo migué!
       </button>
 
-      <p class="small text-secondary mt-2 mb-0">
-        Migués realizados: <strong>0</strong>
-      </p>
-    </div>
+      <div class="d-flex justify-content-center gap-2 flex-wrap mt-4">
+        <button type="button" class="btn btn-success">Copiar migué</button>
+
+        <button type="button" class="btn btn-primary">Favoritar</button>
+
+        <button type="button" class="btn btn-secondary">Histórico</button>
+      </div>
+
+      <p class="small text-secondary mt-3">Contador de Migués realizados: 0</p>
+    </main>
+
+    <footer class="text-center text-secondary small fixed-bottom pb-3">
+      Desenvolvido por Vinicius Valle e Heitor Barbosa
+    </footer>
+
+    <script src="./src/js/script.js"></script>
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
