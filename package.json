@@ -1,0 +1,24 @@
+{
+  "name": "ms2-s.i.g.m.a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heitor-09/MS2-S.I.G.M.A.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Heitor-09/MS2-S.I.G.M.A/issues"
+  },
+  "homepage": "https://github.com/Heitor-09/MS2-S.I.G.M.A#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
