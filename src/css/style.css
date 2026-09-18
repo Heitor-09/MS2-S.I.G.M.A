@@ -1,89 +1,28 @@
-body {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    margin: 0;
-    padding-bottom: 60px;
+* {
     font-family: "Poppins", sans-serif;
 }
 
-h1 {
-    font-weight: 600;
-}
-
-button {
-    font-family: "Poppins", sans-serif;
-}
-
-#alertaGeral {
-    min-width: 300px;
-    text-align: center;
-    z-index: 1050;
-}
-
-#nivelBadge:empty {
-    display: none;
-}
 
 #nivelBadge {
     font-size: 0.85rem;
     padding: 0.4em 0.8em;
 }
 
-.animacao-alert {
-    animation: aparecer 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+@keyframes deslizar {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-.animacao-saida {
-    animation: desaparecer 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
-}
-
-@keyframes aparecer {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes desaparecer {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-}
+.animacao-alert { animation: deslizar 0.35s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.animacao-saida { animation: deslizar 0.35s cubic-bezier(0.4, 0, 1, 1) reverse forwards; }
 
 @keyframes badgePop {
-    0% {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-    60% {
-        transform: scale(1.08);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-.badge-animado {
-    animation: badgePop 0.35s ease-out;
-}
+.badge-animado { animation: badgePop 0.35s ease-out; }
 
 @media (max-height: 500px) {
     footer {
