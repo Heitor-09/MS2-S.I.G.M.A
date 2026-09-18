@@ -19,11 +19,19 @@ button {
     font-family: "Poppins", sans-serif;
 }
 
-#migue,
-#alertaCopiado,
-#alertaFavorito {
+#alertaGeral {
     min-width: 300px;
     text-align: center;
+    z-index: 1050;
+}
+
+#nivelBadge:empty {
+    display: none;
+}
+
+#nivelBadge {
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
 }
 
 .animacao-alert {
@@ -56,6 +64,25 @@ button {
         transform: translateY(-20px);
         opacity: 0;
     }
+}
+
+@keyframes badgePop {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.badge-animado {
+    animation: badgePop 0.35s ease-out;
 }
 
 @media (max-height: 500px) {
