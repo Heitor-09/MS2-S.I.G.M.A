@@ -7,6 +7,7 @@ body {
     text-align: center;
     min-height: 100vh;
     margin: 0;
+    padding-bottom: 60px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -23,47 +24,43 @@ button {
 #alertaFavorito {
     min-width: 300px;
     text-align: center;
-    z-index: 1050;
-}
-
-#migue {
-    top: 0;
-}
-
-#alertaCopiado {
-    top: 75px;
-}
-
-#alertaFavorito {
-    top: 125px;
 }
 
 .animacao-alert {
-    animation: aparecer 0.5s ease-out;
+    animation: aparecer 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .animacao-saida {
-    animation: desaparecer 0.4s ease-in forwards;
+    animation: desaparecer 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 @keyframes aparecer {
     from {
-        transform: translate(-50%, -60px);
+        transform: translateY(-20px);
+        opacity: 0;
     }
 
     to {
-        transform: translate(-50%, 0);
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes desaparecer {
     from {
-        transform: translate(-50%, 0);
+        transform: translateY(0);
         opacity: 1;
     }
 
     to {
-        transform: translate(-50%, -60px);
+        transform: translateY(-20px);
         opacity: 0;
+    }
+}
+
+@media (max-height: 500px) {
+    footer {
+        font-size: 0.7rem;
+        padding-bottom: 0.5rem !important;
     }
 }
